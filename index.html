@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Food Delivery Website Design - HTML, CSS & JavaScript</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <a href="#" class="logo"><img src="image/logo.png" alt="">Nouri<span>fy</span></a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">How it works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">App</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Company</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner container">
+            <div class="banner-des">
+                <p>Nourify</p>
+                <h3>Fuel Your Body, Feed Your Soul</h3>
+                <p>
+                    Nourify is a wellness platform that provides customized meal plans, recipes, and nutrition coaching to help individuals achieve their health goals. Our focus is on delicious, nutrient-dense food that nourishes the body and fuels a vibrant life.
+                </p>
+
+                <div class="play-store">
+                    <a href="#"><img src="image/apple.png" alt=""></a>
+                    <a href="#"><img src="image/store.png" alt=""></a>
+                </div>
+                <div class="food-cat">
+                    <div class="food-img">
+                        <img src="image/1.png" alt="">
+                    </div>
+                    <div class="food-img">
+                        <img src="image/2.png" alt="">
+                    </div>
+                    <div class="food-img">
+                        <img src="image/3.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-img">
+                <img src="image/banner.png" alt="">
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.nav-list');
+
+        hamburger.addEventListener('click', function(){
+            hamburger.classList.toggle('active')
+            navList.classList.toggle('active')
+        });
+
+        document.querySelectorAll('.nav-link').forEach(item => item.addEventListener('click', function(){
+            hamburger.classList.remove('active')
+            navList.classList.remove('active')
+        }))
+    </script>
+</body>
+</html>
